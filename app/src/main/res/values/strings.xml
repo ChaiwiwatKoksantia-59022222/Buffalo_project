@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Buffalo_project</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="name_big">Buffaloes</string>
+    <string name="name_little">Estrus Detection Organizer</string>
+
+    <string name="tab_1">คำนวณ</string>
+    <string name="tab_2">พฤติกรรม</string>
+    <string name="tab_2_sub">การเป็นสัดในกระบือ</string>
+    <string name="tab_3">การเหนี่ยวนำ</string>
+    <string name="tab_3_sub">การเป็นสัด</string>
+    <string name="tab_4">การผสมเทียม</string>
+    <string name="tab_5">เพิ่มเติม</string>
+    <string name="tab_5_menu_1_1">คำศัพท์</string>
+    <string name="tab_5_menu_2">เกี่ยวกับเรา</string>
+    <string name="tab_5_menu_2_1">ผู้จัดทำ</string>
+    <string name="tab_5_menu_2_2">บรรณานุกรม</string>
+
+    <string name="input_1">กดเพื่อใส่ข้อมูล</string>
+    <string name="input_2">กดเพื่อใส่ข้อมูล</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="calName">คำนวณการตั้งท้องของกระบือ</string>
+    <string name="calCell1">วันแรกของการผสมพันธุ์</string>
+    <string name="calCell2">จำนวนวันเฉลี่ยของวงรอบการเป็นสัดในแต่ละครั้ง</string>
+    <string name="calButton">คำนวณ</string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="colorPrimary">#398e32</item>
+        <item name="colorPrimaryDark">#398e32</item>
+        <item name="colorAccent">#398e32</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="bottomBar" >
+        <item name="colorPrimary">#398e32</item>
+        <item name="colorPrimaryDark">#398e32</item>
+        <item name="colorAccent">#398e32</item>
+    </style>
+
+    <style name="mainButton" >
+        <item name="colorControlHighlight">#a2ffffff</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="colorPrimary">#398e32</item>
+        <item name="colorPrimaryDark">#398e32</item>
+        <item name="colorAccent">#398e32</item>
+    </style>
+
+    <style name="whiteButton" >
+        <item name="colorControlHighlight">#c1d9d9d9</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="colorPrimary">#398e32</item>
+        <item name="colorPrimaryDark">#398e32</item>
+        <item name="colorAccent">#398e32</item>
+    </style>
+
+
+    
+</resources>

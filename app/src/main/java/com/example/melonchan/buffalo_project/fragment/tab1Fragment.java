@@ -54,6 +54,7 @@ public class tab1Fragment extends Fragment {
     private void hub(){
         date_btn();
         cycle_btn();
+        main_btn();
     }
 
     private void date_btn(){
@@ -76,6 +77,16 @@ public class tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 main_calendar.getDialog(textView);
+            }
+        });
+    }
+
+    private void main_btn(){
+        main_cal_btn = view.findViewById(R.id.main_cal_button);
+        main_cal_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                main_calendar.getResult();
             }
         });
     }

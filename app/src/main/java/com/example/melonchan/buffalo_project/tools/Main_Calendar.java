@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.melonchan.buffalo_project.R;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import static java.security.AccessController.getContext;
@@ -39,6 +40,7 @@ public class Main_Calendar {
     TextView textView;
 
     Dialog dialog;
+    Boolean c1 = false,c2 = false;
 
     public Main_Calendar(View view,Context context,FragmentActivity activity) {
         this.view = view;
@@ -49,6 +51,23 @@ public class Main_Calendar {
         calendar = Calendar.getInstance();
         my_dialog = new My_Dialog(context);
         initData();
+    }
+
+    public void getResult(){
+        ArrayList<String> arrayList = new ArrayList<>();
+        if (!c1 || !c2){
+            my_dialog.alertDialog("ข้อมูลไม่ครบ","ปิด");
+        }
+        else {
+            Calculator calculator = new Calculator(day,month,year,cycle);
+
+            arrayList = calculator.getDate();
+        }
+        Log.e("DAY 1",arrayList.get(0));
+        Log.e("DAY 2",arrayList.get(1));
+        Log.e("DAY 3",arrayList.get(2));
+        Log.e("DAY 4",arrayList.get(3));
+        Log.e("DAY 5",arrayList.get(4));
     }
 
     public void getDialog(final TextView textView){
@@ -87,9 +106,15 @@ public class Main_Calendar {
                 if (cycle > 365){
                     my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
                     cycle = 0;
+                    c2 = false;
+                }
+                else if (cycle == 0){
+                    my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                    c2 = false;
                 }
                 else {
                     textView.setText(text+" วัน");
+                    c2 = true;
                 }
 
                 dialog.cancel();
@@ -140,6 +165,7 @@ public class Main_Calendar {
     };
 
     private void setText(){
+        c1 = true;
         textView.setText(getData());
     }
 

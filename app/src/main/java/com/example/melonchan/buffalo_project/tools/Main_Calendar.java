@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.icu.text.NumberFormat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -53,8 +55,10 @@ public class Main_Calendar {
         initData();
     }
 
-    public void getResult(){
+    public ArrayList<String> getResult(){
+
         ArrayList<String> arrayList = new ArrayList<>();
+
         if (!c1 || !c2){
             my_dialog.alertDialog("ข้อมูลไม่ครบ","ปิด");
         }
@@ -62,12 +66,21 @@ public class Main_Calendar {
             Calculator calculator = new Calculator(day,month,year,cycle);
 
             arrayList = calculator.getDate();
+
+            Log.e("DAY 1",arrayList.get(0));
+            Log.e("DAY 2",arrayList.get(1));
+            Log.e("DAY 3",arrayList.get(2));
+            Log.e("DAY 4",arrayList.get(3));
+            Log.e("DAY 5",arrayList.get(4));
+
         }
-        Log.e("DAY 1",arrayList.get(0));
-        Log.e("DAY 2",arrayList.get(1));
-        Log.e("DAY 3",arrayList.get(2));
-        Log.e("DAY 4",arrayList.get(3));
-        Log.e("DAY 5",arrayList.get(4));
+
+        return arrayList;
+
+    }
+
+    public boolean checkReady(){
+        return (c1 && c2);
     }
 
     public void getDialog(final TextView textView){
@@ -100,21 +113,32 @@ public class Main_Calendar {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = String.valueOf(Integer.parseInt(editText.getText().toString()));
-                cycle = Integer.parseInt(text);
+                String text = editText.getText().toString();
 
-                if (cycle > 365){
+                if (text.length() <= 0){
                     my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
-                    cycle = 0;
-                    c2 = false;
-                }
-                else if (cycle == 0){
-                    my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
-                    c2 = false;
                 }
                 else {
-                    textView.setText(text+" วัน");
-                    c2 = true;
+                    try {
+
+                        cycle = Integer.parseInt(text);
+                        if (cycle > 60){
+                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                            cycle = 0;
+                            c2 = false;
+                        }
+                        else if (cycle == 0){
+                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                            c2 = false;
+                        }
+                        else {
+                            textView.setText(text+" วัน");
+                            c2 = true;
+                        }
+
+                    } catch (NumberFormatException n){
+                        my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                    }
                 }
 
                 dialog.cancel();

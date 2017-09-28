@@ -1,12 +1,14 @@
 package com.example.melonchan.buffalo_project.fragment;
 
 import com.example.melonchan.buffalo_project.R;
+import com.example.melonchan.buffalo_project.ResultActivity;
 import com.example.melonchan.buffalo_project.font.Mitr;
 import com.example.melonchan.buffalo_project.font.Sukhumvit;
 import com.example.melonchan.buffalo_project.tools.Main_Calendar;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class tab1Fragment extends Fragment {
@@ -86,7 +89,18 @@ public class tab1Fragment extends Fragment {
         main_cal_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                main_calendar.getResult();
+                ArrayList<String> arrayList = main_calendar.getResult();
+
+                if (main_calendar.checkReady()){
+
+                    Intent intent = new Intent(getActivity(), ResultActivity.class);
+                    intent.putExtra("day1",arrayList.get(0));
+                    intent.putExtra("day2",arrayList.get(1));
+                    intent.putExtra("day3",arrayList.get(2));
+                    intent.putExtra("day4",arrayList.get(3));
+                    intent.putExtra("day5",arrayList.get(4));
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -254,13 +254,18 @@ public class Calculator {
             Integer m2 = getMonthDay(md1,y1);
 
             while (d_t < 0){
+                Log.e("DAY",String.valueOf(d_t));
+                Log.e("MONTH",String.valueOf(m1));
+                Log.e("YEAR",String.valueOf(y1));
+
                 m1 = m1 - 1;
-                m2 = getMonthDay(m1,y1);
-                d_t = d_t + m2;
-                if (m1 < 0){
-                    m1 = m1 + 12;
+                if (m1 < 1){
+                    m1 = m1+12;
                     y1 = y1 - 1;
                 }
+                m2 = getMonthDay(m1,y1);
+                d_t = d_t + m2;
+
 
             }
 

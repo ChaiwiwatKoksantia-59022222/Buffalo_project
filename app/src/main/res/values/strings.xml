@@ -21,11 +21,20 @@
     <string name="input_1">กดเพื่อใส่ข้อมูล</string>
     <string name="input_2">กดเพื่อใส่ข้อมูล</string>
 
+    <string name="result_main_title">ผลการคำนวณ</string>
+    <string name="result_sub_title">การตั้งท้องของกระบือ</string>
+
+
+    <string name="result_day1">วันที่ตั้งท้อง</string>
+    <string name="result_day2">วันครบกำหนดคลอด</string>
+    <string name="result_day3">ครบกำหนด</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="calName">คำนวณการตั้งท้องของกระบือ</string>
     <string name="calCell1">วันแรกของการผสมพันธุ์</string>
     <string name="calCell2">จำนวนวันเฉลี่ยของวงรอบการเป็นสัดในแต่ละครั้ง</string>
     <string name="calButton">คำนวณ</string>
+    <string name="title_activity_result">ResultActivity</string>
 
 </resources>

@@ -2,6 +2,7 @@ package com.example.melonchan.buffalo_project.fragment;
 
 import com.example.melonchan.buffalo_project.R;
 import com.example.melonchan.buffalo_project.font.Sukhumvit;
+import com.example.melonchan.buffalo_project.tools.AppData;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

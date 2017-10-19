@@ -29,6 +29,8 @@
         <item>โปรแกรมการเหนี่ยวนำการเป็นสัด โดยใช้ซีด้า (CIDR®)</item>
         <item>ผลิตภัณฑ์  P-sync” อุปกรณ์เหนี่ยวนำฮอร์โมนในรูปแบบพลาสเตอร์เพื่อนำส่งฮอร์โมนโปรเจสเตอโรนเข้าสู่ร่างกายสัตว์</item>
         <item>Ov-Synch คล้าย ๆ กับ Co-Synch แต่รอให้ไข่ตกเสียก่อนแล้วจึงค่อยผสมเทียม หลังจากการฉีด GnRH ครั้งที่ 2 1 วัน (วันที่ 10)</item>
+        <item>GnRH คือ Cystorelin®, Factrel®, Fertagyl®, OvaCyst®</item>
+        <item>PG คือ EstroPLAN®, Estrumate®, In-Synch®, Lutalyse®, ProstaMate®</item>
     </string-array>
 
     <string-array name="artificial_insemination_equipment_text_data">
@@ -47,6 +49,18 @@
         <item>ปืนสอดแท่งฮอร์โมน CIDR</item>
         <item>เข็มฉีด</item>
         <item>P-sync แผ่นควบคุมรอบการเป็นสัดในโคกระบือ</item>
+    </string-array>
+
+    <string-array name="t1_des">
+        <item>"No"</item>
+        <item>"No"</item>
+        <item>"No"</item>
+        <item>"No"</item>
+        <item>"No"</item>
+        <item>"***อ้างอิง https://www.bovine-elite.com/estrus.asp"</item>
+        <item>"***อ้างอิง Pursley JR Mee MO และ Wiltbank M C. 1995; 44: 915-923"</item>
+        <item>"No"</item>
+        <item>"No"</item>
     </string-array>
 
     <string-array name="artificial_insemination_full_method_text_data">
@@ -77,21 +91,65 @@
     </string-array>
 
     <string-array name="behavior_image_data">
-        <!--
-        <item>@drawable/???</item>
-        -->
+
+        <item>@drawable/a1</item>
+        <item>@drawable/a2</item>
+        <item>@drawable/a3</item>
+        <item>@drawable/a4</item>
+        <item>@drawable/a5</item>
+        <item>@drawable/a6</item>
+        <item>@drawable/a7</item>
+        <item>@drawable/a8</item>
+        <item>@drawable/a9</item>
+        <item>@drawable/a10</item>
+        <item>@drawable/a11</item>
+
+    </string-array>
+
+    <string-array name="artificial_insemination_short_method_image_data">
+        <item>@drawable/d1</item>
+        <item>@drawable/d2</item>
+        <item>@drawable/d3</item>
+        <item>@drawable/d4</item>
+        <item>@drawable/d5</item>
+        <item>@drawable/d6</item>
+        <item>@drawable/d7</item>
     </string-array>
 
     <string-array name="induction_program_image_data">
-        <!--
-        <item>@drawable/???</item>
-        -->
+
+        <item>@drawable/e1</item>
+        <item>@drawable/e2</item>
+        <item>@drawable/e3</item>
+        <item>@drawable/e4</item>
+        <item>@drawable/e5</item>
+        <item>@drawable/e6</item>
+        <item>@drawable/e7</item>
+        <item>@drawable/unknown_picture</item>
+        <item>@drawable/unknown_picture</item>
+
+    </string-array>
+
+    <string-array name="induction_equipment_image_data">
+
+        <item>@drawable/b1</item>
+        <item>@drawable/b2</item>
+        <item>@drawable/b3</item>
+        <item>@drawable/b4</item>
+
     </string-array>
 
     <string-array name="artificial_insemination_image_data">
-        <!--
-        <item>@drawable/???</item>
-        -->
+
+        <item>@drawable/c1</item>
+        <item>@drawable/c2</item>
+        <item>@drawable/c3</item>
+        <item>@drawable/c4</item>
+        <item>@drawable/c5</item>
+        <item>@drawable/c6</item>
+        <item>@drawable/c7</item>
+        <item>@drawable/c8</item>
+
     </string-array>
 
     <string-array name="vocabulary_word_text_data">

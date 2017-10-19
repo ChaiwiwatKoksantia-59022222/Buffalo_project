@@ -15,21 +15,21 @@ public class AppData {
         this.context = context;
     }
 
-    public static String[] getData(int resourceID){
+    public static String[] getData(int resourceID) {
         TypedArray typedArray = context.getResources().obtainTypedArray(resourceID);
         String[] array_res = new String[typedArray.length()];
-        for (int i = 0; i < array_res.length ; i++){
+        for (int i = 0; i < array_res.length; i++) {
             array_res[i] = typedArray.getString(i);
         }
         typedArray.recycle();
         return array_res;
     }
 
-    public static int[] getData(int resourceID,int defaultResourceID){
+    public static int[] getData(int resourceID, int defaultResourceID) {
         TypedArray typedArray = context.getResources().obtainTypedArray(resourceID);
         int[] array_res = new int[typedArray.length()];
-        for (int i = 0;i < array_res.length;i++){
-            array_res[i] = typedArray.getResourceId(i,defaultResourceID);
+        for (int i = 0; i < array_res.length; i++) {
+            array_res[i] = typedArray.getResourceId(i, defaultResourceID);
         }
         typedArray.recycle();
         return array_res;

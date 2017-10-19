@@ -16,7 +16,7 @@ import com.example.melonchan.buffalo_project.tools.navigationBar;
 
 public class ResultActivity extends AppCompatActivity {
 
-    String day1,day2,day3,day4,day5;
+    String day1, day2, day3, day4, day5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +36,18 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    private void setTextView(){
-        TextView day1s = (TextView)findViewById(R.id.result_text_day1);
+    private void setTextView() {
+        TextView day1s = (TextView) findViewById(R.id.result_text_day1);
         day1s.setText(day1);
-        TextView day2s = (TextView)findViewById(R.id.result_text_day2);
+        TextView day2s = (TextView) findViewById(R.id.result_text_day2);
         day2s.setText(day2);
-        TextView day3s = (TextView)findViewById(R.id.result_text_day3);
+        TextView day3s = (TextView) findViewById(R.id.result_text_day3);
         day3s.setText(day5);
-        TextView day4s = (TextView)findViewById(R.id.result_text_day4);
+        TextView day4s = (TextView) findViewById(R.id.result_text_day4);
         day4s.setText(day4);
     }
 
-    private void getDate(){
+    private void getDate() {
         Bundle bundle = getIntent().getExtras();
         day1 = bundle.getString("day1");
         day2 = bundle.getString("day2");
@@ -55,7 +55,6 @@ public class ResultActivity extends AppCompatActivity {
         day4 = bundle.getString("day4");
         day5 = bundle.getString("day5");
     }
-
 
 
 }

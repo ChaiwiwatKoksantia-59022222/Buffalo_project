@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Light_v26(getWindow());
 
-        sukhumvit = new Sukhumvit(getAssets(),"fonts");
+        sukhumvit = new Sukhumvit(getAssets(), "fonts");
 
         sBottomBar();
         start_fragment();
@@ -55,19 +55,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void start_fragment(){
+    public void start_fragment() {
         tab1Fragment tab1 = new tab1Fragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab1).commit();
     }
 
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
         My_Dialog my_dialog = new My_Dialog(MainActivity.this);
-        exitDialog("คุณต้องการที่จะออกจากแอป?","ยกเลิก","ยืนยัน");
+        exitDialog("คุณต้องการที่จะออกจากแอป?", "ยกเลิก", "ยืนยัน");
     }
 
-    public void exitDialog(String text, String cancel_text, String confirm_text){
+    public void exitDialog(String text, String cancel_text, String confirm_text) {
         final Dialog dialog = new Dialog(MainActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.cancel_dialog);
@@ -99,30 +99,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void sBottomBar(){
+    public void sBottomBar() {
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
-                if (tabId == R.id.nav_tab_1){
+                if (tabId == R.id.nav_tab_1) {
                     tab1Fragment tab1 = new tab1Fragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab1).commit();
-                }
-                else if (tabId == R.id.nav_tab_2){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab1).commit();
+                } else if (tabId == R.id.nav_tab_2) {
                     tab2Fragment tab2 = new tab2Fragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab2).commit();
-                }
-                else if (tabId == R.id.nav_tab_3){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab2).commit();
+                } else if (tabId == R.id.nav_tab_3) {
                     tab3Fragment tab3 = new tab3Fragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab3).commit();
-                }
-                else if (tabId == R.id.nav_tab_4){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab3).commit();
+                } else if (tabId == R.id.nav_tab_4) {
                     tab4Fragment tab4 = new tab4Fragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab4).commit();
-                }
-                else {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab4).commit();
+                } else {
                     tab5Fragment tab5 = new tab5Fragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,tab5).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, tab5).commit();
                 }
             }
         });

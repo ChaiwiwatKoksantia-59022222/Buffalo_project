@@ -47,7 +47,7 @@ public class My_Dialog {
         });
     }
 
-    public void exitDialog(String text, String cancel_text, String confirm_text){
+    public void exitDialog(String text, String cancel_text, String confirm_text) {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.cancel_dialog);

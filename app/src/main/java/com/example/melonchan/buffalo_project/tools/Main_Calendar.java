@@ -34,7 +34,7 @@ public class Main_Calendar {
     Context context;
     FragmentActivity activity;
     Calendar calendar;
-    int year,month,day,cycle;
+    int year, month, day, cycle;
 
     Calendar_Tools tools;
     My_Dialog my_dialog;
@@ -42,9 +42,9 @@ public class Main_Calendar {
     TextView textView;
 
     Dialog dialog;
-    Boolean c1 = false,c2 = false;
+    Boolean c1 = false, c2 = false;
 
-    public Main_Calendar(View view,Context context,FragmentActivity activity) {
+    public Main_Calendar(View view, Context context, FragmentActivity activity) {
         this.view = view;
         this.context = context;
         this.activity = activity;
@@ -55,23 +55,22 @@ public class Main_Calendar {
         initData();
     }
 
-    public ArrayList<String> getResult(){
+    public ArrayList<String> getResult() {
 
         ArrayList<String> arrayList = new ArrayList<>();
 
-        if (!c1 || !c2){
-            my_dialog.alertDialog("ข้อมูลไม่ครบ","ปิด");
-        }
-        else {
-            Calculator calculator = new Calculator(day,month,year,cycle);
+        if (!c1 || !c2) {
+            my_dialog.alertDialog("ข้อมูลไม่ครบ", "ปิด");
+        } else {
+            Calculator calculator = new Calculator(day, month, year, cycle);
 
             arrayList = calculator.getDate();
 
-            Log.e("DAY 1",arrayList.get(0));
-            Log.e("DAY 2",arrayList.get(1));
-            Log.e("DAY 3",arrayList.get(2));
-            Log.e("DAY 4",arrayList.get(3));
-            Log.e("DAY 5",arrayList.get(4));
+            Log.e("DAY 1", arrayList.get(0));
+            Log.e("DAY 2", arrayList.get(1));
+            Log.e("DAY 3", arrayList.get(2));
+            Log.e("DAY 4", arrayList.get(3));
+            Log.e("DAY 5", arrayList.get(4));
 
         }
 
@@ -79,11 +78,11 @@ public class Main_Calendar {
 
     }
 
-    public boolean checkReady(){
+    public boolean checkReady() {
         return (c1 && c2);
     }
 
-    public void getDialog(final TextView textView){
+    public void getDialog(final TextView textView) {
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.main_input_dialog);
@@ -115,29 +114,26 @@ public class Main_Calendar {
             public void onClick(View v) {
                 String text = editText.getText().toString();
 
-                if (text.length() <= 0){
-                    my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
-                }
-                else {
+                if (text.length() <= 0) {
+                    my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง", "ปิด");
+                } else {
                     try {
 
                         cycle = Integer.parseInt(text);
-                        if (cycle > 60){
-                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                        if (cycle > 60) {
+                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง", "ปิด");
                             cycle = 0;
                             c2 = false;
-                        }
-                        else if (cycle == 0){
-                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                        } else if (cycle == 0) {
+                            my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง", "ปิด");
                             c2 = false;
-                        }
-                        else {
-                            textView.setText(text+" วัน");
+                        } else {
+                            textView.setText(text + " วัน");
                             c2 = true;
                         }
 
-                    } catch (NumberFormatException n){
-                        my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง","ปิด");
+                    } catch (NumberFormatException n) {
+                        my_dialog.alertDialog("ข้อมูลไม่ถูกต้อง", "ปิด");
                     }
                 }
 
@@ -147,36 +143,36 @@ public class Main_Calendar {
     }
 
 
-    private void initData(){
+    private void initData() {
         this.year = calendar.get(Calendar.YEAR) + 543;
         this.month = calendar.get(Calendar.MONTH) + 1;
         this.day = calendar.get(Calendar.DAY_OF_MONTH);
         //yearDay = calendar.get(Calendar.DAY_OF_YEAR);
     }
 
-    public String getData(){
+    public String getData() {
         return "วันที่ " + String.valueOf(day) + " " + tools.convertMonth_intToName(month) + " พ.ศ." + String.valueOf(year);
     }
 
-    public void resetCalendar(){
+    public void resetCalendar() {
         initData();
     }
 
-    public void getCalenderDialog(){
+    public void getCalenderDialog() {
         resetCalendar();
-        new DatePickerDialog(activity,date_s
-                ,calendar.get(Calendar.YEAR)
-                ,calendar.get(Calendar.MONTH)
-                ,calendar.get(Calendar.DAY_OF_MONTH)).show();
+        new DatePickerDialog(activity, date_s
+                , calendar.get(Calendar.YEAR)
+                , calendar.get(Calendar.MONTH)
+                , calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
-    public void getCalenderDialog_withSetText(TextView textView){
+    public void getCalenderDialog_withSetText(TextView textView) {
         resetCalendar();
         this.textView = textView;
-        new DatePickerDialog(activity,date_s
-                ,calendar.get(Calendar.YEAR)
-                ,calendar.get(Calendar.MONTH)
-                ,calendar.get(Calendar.DAY_OF_MONTH)).show();
+        new DatePickerDialog(activity, date_s
+                , calendar.get(Calendar.YEAR)
+                , calendar.get(Calendar.MONTH)
+                , calendar.get(Calendar.DAY_OF_MONTH)).show();
 
 
     }
@@ -184,16 +180,16 @@ public class Main_Calendar {
     DatePickerDialog.OnDateSetListener date_s = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-            setDateFromPicker(year + 543,month + 1,day);
+            setDateFromPicker(year + 543, month + 1, day);
         }
     };
 
-    private void setText(){
+    private void setText() {
         c1 = true;
         textView.setText(getData());
     }
 
-    private void setDateFromPicker(int year, int month, int day){
+    private void setDateFromPicker(int year, int month, int day) {
         this.year = year;
         this.month = month;
         this.day = day;

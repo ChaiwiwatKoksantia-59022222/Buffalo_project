@@ -23,34 +23,31 @@ public class navigationBar {
         return navigationBar;
     }
 
-    public void getAction(RelativeLayout relativeLayout){
-        if (navigationBar){
+    public void getAction(RelativeLayout relativeLayout) {
+        if (navigationBar) {
             relativeLayout.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             relativeLayout.setVisibility(View.VISIBLE);
         }
     }
 
-    public void getAction(LinearLayout linearLayout){
-        if (navigationBar){
+    public void getAction(LinearLayout linearLayout) {
+        if (navigationBar) {
             linearLayout.setVisibility(View.GONE);
-        }
-        else{
+        } else {
             linearLayout.setVisibility(View.VISIBLE);
         }
     }
 
-    public void getAction(CardView cardView){
-        if (navigationBar){
+    public void getAction(CardView cardView) {
+        if (navigationBar) {
             cardView.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             cardView.setVisibility(View.VISIBLE);
         }
     }
 
-    private boolean isNavigationBarAvailable(){
+    private boolean isNavigationBarAvailable() {
 
         boolean hasBackKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK);
         boolean hasHomeKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_HOME);

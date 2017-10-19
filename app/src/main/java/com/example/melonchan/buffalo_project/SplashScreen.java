@@ -1,7 +1,9 @@
 package com.example.melonchan.buffalo_project;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +19,10 @@ import com.example.melonchan.buffalo_project.tools.Light_v26;
 
 public class SplashScreen extends AppCompatActivity {
 
-
+    Handler handler;
+    Runnable runnable;
+    long delay_time;
+    long time = 3000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +31,37 @@ public class SplashScreen extends AppCompatActivity {
 
         new Light_v26(getWindow());
 
-        Sukhumvit sukhumvit = new Sukhumvit(this.getAssets(),"fonts");
+        handler = new Handler();
 
-        TextView big = (TextView)findViewById(R.id.splashScreen_text_big);
+        runnable = new Runnable() {
+            public void run() {
+                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+
+        Sukhumvit sukhumvit = new Sukhumvit(this.getAssets(), "fonts");
+
+        TextView big = (TextView) findViewById(R.id.splashScreen_text_big);
         big.setTypeface(sukhumvit.bold());
-        TextView little = (TextView)findViewById(R.id.splashScreen_text_little);
+        TextView little = (TextView) findViewById(R.id.splashScreen_text_little);
         little.setTypeface(sukhumvit.light());
 
 
+    }
 
+    public void onResume() {
+        super.onResume();
+        delay_time = time;
+        handler.postDelayed(runnable, delay_time);
+        time = System.currentTimeMillis();
+    }
+
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(runnable);
+        time = delay_time - (System.currentTimeMillis() - time);
     }
 
 

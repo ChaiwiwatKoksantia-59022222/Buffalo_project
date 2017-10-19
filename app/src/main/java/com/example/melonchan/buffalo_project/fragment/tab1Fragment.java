@@ -42,25 +42,25 @@ public class tab1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_tab1,container,false);
+        view = inflater.inflate(R.layout.fragment_tab1, container, false);
         //sukhumvit = new Sukhumvit(getActivity().getAssets(),"fonts");
         //mitr = new Mitr(getActivity().getAssets(),"fonts");
 
-        main_calendar = new Main_Calendar(view,getContext(),getActivity());
+        main_calendar = new Main_Calendar(view, getContext(), getActivity());
 
-        image();
+        //image();
         hub();
 
         return view;
     }
 
-    private void hub(){
+    private void hub() {
         date_btn();
         cycle_btn();
         main_btn();
     }
 
-    private void date_btn(){
+    private void date_btn() {
 
         final TextView date_tv = view.findViewById(R.id.main_date_text);
         RelativeLayout date_btn = view.findViewById(R.id.main_date_button);
@@ -73,7 +73,7 @@ public class tab1Fragment extends Fragment {
 
     }
 
-    private void cycle_btn(){
+    private void cycle_btn() {
         final TextView textView = view.findViewById(R.id.main_cycle_text);
         RelativeLayout cycle_btn = view.findViewById(R.id.main_cycle_button);
         cycle_btn.setOnClickListener(new View.OnClickListener() {
@@ -84,36 +84,36 @@ public class tab1Fragment extends Fragment {
         });
     }
 
-    private void main_btn(){
+    private void main_btn() {
         main_cal_btn = view.findViewById(R.id.main_cal_button);
         main_cal_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ArrayList<String> arrayList = main_calendar.getResult();
 
-                if (main_calendar.checkReady()){
+                if (main_calendar.checkReady()) {
 
                     Intent intent = new Intent(getActivity(), ResultActivity.class);
-                    intent.putExtra("day1",arrayList.get(0));
-                    intent.putExtra("day2",arrayList.get(1));
-                    intent.putExtra("day3",arrayList.get(2));
-                    intent.putExtra("day4",arrayList.get(3));
-                    intent.putExtra("day5",arrayList.get(4));
+                    intent.putExtra("day1", arrayList.get(0));
+                    intent.putExtra("day2", arrayList.get(1));
+                    intent.putExtra("day3", arrayList.get(2));
+                    intent.putExtra("day4", arrayList.get(3));
+                    intent.putExtra("day5", arrayList.get(4));
                     startActivity(intent);
                 }
             }
         });
     }
 
-    private void image(){
+    private void image() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         //int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
 
         ImageView imageView = view.findViewById(R.id.main_image);
-        int x = width/2;
-        imageView.getLayoutParams().height = x + (x/3);
+        int x = width / 2;
+        imageView.getLayoutParams().height = x + (x / 3);
         imageView.getLayoutParams().width = width;
         imageView.requestLayout();
     }

@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:context="com.example.melonchan.buffalo_project.MainActivity">
 
     <FrameLayout
         android:id="@+id/main_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="64dp" />
 
-<!--
-    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom" />
--->
+    <!--
+        <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom" />
+    -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,32 +29,32 @@
         android:layout_alignParentBottom="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#46000000"
-                />
+                android:background="#46000000" />
+
             <RelativeLayout
-                android:paddingBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
 
                 <com.roughike.bottombar.BottomBar
                     android:id="@+id/bottomBar"
-                    android:paddingBottom="0dp"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
+                    android:paddingBottom="0dp"
                     android:theme="@style/bottomBar"
                     app:bb_tabXmlResource="@xml/bottom_navigationbar" />
 
             </RelativeLayout>
 
         </LinearLayout>
-
 
 
     </RelativeLayout>

@@ -101,12 +101,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="6dp"
-                android:layout_height="257dp"
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_marginLeft="38dp"
-                android:layout_marginTop="25dp"
-                android:background="@color/tabColor" />
+                android:layout_marginTop="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="6dp"
+                    android:layout_height="95dp"
+                    android:background="@drawable/line_result_start" />
+                <RelativeLayout
+                    android:layout_marginTop="25dp"
+                    android:visibility="visible"
+                    android:layout_width="6dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/line_result_end" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,7 +138,7 @@
                         android:layout_marginLeft="83dp"
                         android:layout_marginRight="33dp"
                         android:layout_marginTop="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS1"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="0dp">
 
@@ -145,7 +158,7 @@
                                 android:layout_marginLeft="0dp"
                                 android:layout_marginTop="30dp"
                                 android:text="DATE"
-                                android:textColor="@color/tabColor"
+                                android:textColor="@color/colorS1"
                                 android:textSize="17dp" />
 
                         </android.support.v7.widget.CardView>
@@ -156,7 +169,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS1"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -176,11 +189,12 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="70dp"
                         android:layout_marginRight="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS1"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
                         <android.support.v7.widget.CardView
+                            app:cardBackgroundColor="@color/colorS1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
@@ -194,7 +208,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginLeft="20dp"
                                 android:text="@string/result_day1"
-                                android:textColor="@color/tabColor"
+                                android:textColor="@color/colorW"
                                 android:textSize="18dp"
                                 android:textStyle="bold" />
 
@@ -216,7 +230,7 @@
                         android:layout_marginLeft="83dp"
                         android:layout_marginRight="33dp"
                         android:layout_marginTop="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS2Text"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="0dp">
 
@@ -236,7 +250,7 @@
                                 android:layout_marginLeft="0dp"
                                 android:layout_marginTop="30dp"
                                 android:text="DATE"
-                                android:textColor="@color/tabColor"
+                                android:textColor="@color/colorS2Text"
                                 android:textSize="17dp" />
 
                         </android.support.v7.widget.CardView>
@@ -247,7 +261,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS2Text"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -267,7 +281,7 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="70dp"
                         android:layout_marginRight="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS2Text"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -276,6 +290,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
                             app:cardCornerRadius="15dp"
+                            app:cardBackgroundColor="@color/colorS2Text"
                             app:cardElevation="0dp">
 
                             <TextView
@@ -285,7 +300,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginLeft="20dp"
                                 android:text="@string/result_day2"
-                                android:textColor="@color/tabColor"
+                                android:textColor="@color/colorW"
                                 android:textSize="18dp"
                                 android:textStyle="bold" />
 
@@ -307,7 +322,7 @@
                         android:layout_marginLeft="83dp"
                         android:layout_marginRight="33dp"
                         android:layout_marginTop="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS3"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="0dp">
 
@@ -333,7 +348,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
                                     android:text="DATE"
-                                    android:textColor="@color/tabColor"
+                                    android:textColor="@color/colorS3"
                                     android:textSize="17dp" />
 
                                 <TextView
@@ -344,7 +359,7 @@
                                     android:layout_marginLeft="0dp"
                                     android:layout_marginTop="10dp"
                                     android:text="ถึง"
-                                    android:textColor="@color/tabColor"
+                                    android:textColor="@color/colorS3"
                                     android:textSize="17dp"
                                     android:textStyle="bold" />
 
@@ -355,7 +370,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
                                     android:text="DATE"
-                                    android:textColor="@color/tabColor"
+                                    android:textColor="@color/colorS3"
                                     android:textSize="17dp" />
 
 
@@ -369,7 +384,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS3"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -389,7 +404,7 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="70dp"
                         android:layout_marginRight="20dp"
-                        app:cardBackgroundColor="@color/tabColor"
+                        app:cardBackgroundColor="@color/colorS3"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -398,6 +413,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
                             app:cardCornerRadius="15dp"
+                            app:cardBackgroundColor="@color/colorS3"
                             app:cardElevation="0dp">
 
                             <TextView
@@ -406,7 +422,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginLeft="20dp"
                                 android:text="@string/result_day3"
-                                android:textColor="@color/tabColor"
+                                android:textColor="@color/colorW"
                                 android:textSize="18dp"
                                 android:textStyle="bold" />
 

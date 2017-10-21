@@ -9,6 +9,7 @@
     tools:context="com.example.melonchan.buffalo_project.VocabActivity">
 
 
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,6 +63,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <GridView
+        android:layout_marginBottom="53dp"
         android:scrollbarThumbVertical="@drawable/line_scrollbar"
         android:id="@+id/vocab_listview"
         android:layout_width="match_parent"
@@ -78,6 +80,53 @@
 
 
     </GridView>
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:layout_gravity="bottom"
+        android:id="@+id/result_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#78000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <LinearLayout
+                android:id="@+id/result_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_left_arrow"
+                    android:tint="#78000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="กลับ"
+                    android:textColor="#78000000"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

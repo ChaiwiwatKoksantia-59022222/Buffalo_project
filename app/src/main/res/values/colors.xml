@@ -11,4 +11,10 @@
     <color name="colorGreenCover">#59a54c</color>
 
     <color name="tabColor">#689F38</color>
+
+    <color name="colorS1">#EF5350</color>
+    <color name="colorS2">#FFEE58</color>
+    <color name="colorS2Text">#FBC02D</color>
+    <color name="colorS3">#9CCC65</color>
+    <color name="colorW">#FFFFFF</color>
 </resources>

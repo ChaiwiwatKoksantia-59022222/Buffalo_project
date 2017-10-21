@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -46,6 +47,14 @@ public class DeviceActivity extends AppCompatActivity {
         textView.setText(TITLE);
         TextView text = (TextView) findViewById(R.id.device_name_sub);
         text.setText(SUBTITLE);
+
+        LinearLayout back_btn = (LinearLayout) findViewById(R.id.result_back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
 
         if (ID.contentEquals("1")) {

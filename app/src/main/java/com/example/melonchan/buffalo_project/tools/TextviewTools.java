@@ -68,7 +68,7 @@ public class TextviewTools {
     private void OnShowFull() {
         this.short_textview.setVisibility(View.GONE);
         this.full_textview.setVisibility(View.VISIBLE);
-        this.show_more_btn.setText("แสดงน้อยลง");
+        this.show_more_btn.setText("ย่อข้อความ");
         show_all = true;
     }
 
